@@ -34,4 +34,24 @@ void PrintArray(int[] collection)
     Console.WriteLine();
 }
 
+//Альтернативное решение
 
+int[] array = new int[8];
+FillArr(array); PrintArr(array);
+Console.WriteLine();
+
+void FillArr(int[] arr)
+{
+    Random rnd = new Random();
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = rnd.Next(2);
+    }
+}
+void PrintArr(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]} ");
+    }
+}
